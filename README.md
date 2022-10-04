@@ -2,10 +2,10 @@
 
 ## Functions
 
-- [](Permutation with repetition)
-- [](Permutation without repetition)
-- [](Combinations with repetition)
-- [](Combinations without repetition)
+- [Permutation with repetition](#permutation-with-repetition)
+- [Permutation without repetition](#permutation-without-repetition)
+- [Combinations with repetition](#combinations-with-repetition)
+- [Combinations without repetition](#combinations-without-repetition)
 
 ## Usage
 
