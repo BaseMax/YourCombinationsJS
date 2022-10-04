@@ -1,5 +1,12 @@
 # You Combinations JavaScript (JS)
 
+## Functions
+
+- [](Permutation with repetition)
+- [](Permutation without repetition)
+- [](Combinations with repetition)
+- [](Combinations without repetition)
+
 ## Usage
 
 ### Permutation with repetition
