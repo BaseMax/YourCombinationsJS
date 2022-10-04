@@ -40,3 +40,5 @@ while (true) {
 }
 
 console.log("=====================");
+
+console.log([...combinations.powerSet(k)]);
