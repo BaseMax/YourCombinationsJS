@@ -17,18 +17,18 @@ class YouCombinations {
 			elements.push(this.elements[i]);
 			if (elements.length == length) yield elements;
 			else {
-                yield* this.combinations(length, with_repetition, (with_repetition == true ? i : i + 1), elements);
+				yield* this.combinations(length, with_repetition, (with_repetition == true ? i : i + 1), elements);
 			}
 			
 			elements.pop();
 		}
 	}
 
-    *permutations(length, with_repetition = false, elements = [], keys = []){
-        for (const key in this.elements) {
-            const value = this.elements[key];
-
-            if (with_repetition == false) if (in_array(key, keys)) continue;
+	*permutations(length, with_repetition = false, elements = [], keys = []){
+		for (const key in this.elements) {
+			const value = this.elements[key];
+			
+			if (with_repetition == false) if (in_array(key, keys)) continue;
 
 			keys.push(key);
 			elements.push(value);
@@ -50,16 +50,16 @@ const combinations = new YouCombinations(k);
 
 const _permutations = combinations.permutations(n, true);
 while (true) {
-    const item = _permutations.next();
-    if (item.done) break;
-    console.log(item.value);
+	const item = _permutations.next();
+	if (item.done) break;
+	console.log(item.value);
 }
 
 console.log("");
 
 const _combinations = combinations.combinations(n, true);
 while (true) {
-    const item = _combinations.next();
-    if (item.done) break;
-    console.log(item.value);
+	const item = _combinations.next();
+	if (item.done) break;
+	console.log(item.value);
 }
