@@ -10,10 +10,19 @@ class YouCombinations {
 		this.elements = elements;
 	}    
 	
-	*combinations(length, with_repetition = false, position = 0, elements = []){
+	*powerSet(array) {
+		const size = 2n ** BigInt(array.length); 
+		for (let i = 0; i < size; i++) {
+			const cur = [];
+			for(let j = 0; j < array.length; j++) if((i & (1 << j)) > 0) cur.push(array[j]);
+			yield cur;
+		} 
+	}
+
+	*combinations(length, with_repetition = false, position = 0, elements = []) {
 		const items_count = this.elements.length;
 		
-		for (let i = position; i < items_count; i++){
+		for (let i = position; i < items_count; i++) {
 			elements.push(this.elements[i]);
 
 			if (elements.length === length) yield elements;
@@ -23,7 +32,7 @@ class YouCombinations {
 		}
 	}
 
-	*permutations(length, with_repetition = false, elements = [], keys = []){
+	*permutations(length, with_repetition = false, elements = [], keys = []) {
 		for (const key in this.elements) {
 			const value = this.elements[key];
 
