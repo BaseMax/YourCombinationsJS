@@ -10,7 +10,21 @@ class YouCombinations {
 		this.elements = elements;
 	}    
 	
-	*permutations(length, with_repetition = false, elements = [], keys = []){
+	*combinations(length, with_repetition = false, position = 0, elements = []){
+		const items_count = this.elements.length;
+		
+		for (let i = position; i < items_count; i++){
+			elements.push(this.elements[i]);
+			if (elements.length == length) yield elements;
+			else {
+                yield* this.combinations(length, with_repetition, (with_repetition == true ? i : i + 1), elements);
+			}
+			
+			elements.pop();
+		}
+	}
+
+    *permutations(length, with_repetition = false, elements = [], keys = []){
         for (const key in this.elements) {
             const value = this.elements[key];
 
@@ -33,9 +47,19 @@ const n = 2;
 const k = [1, 2, 3];
 
 const combinations = new YouCombinations(k);
-const permutations = combinations.permutations(n, true);
+
+const _permutations = combinations.permutations(n, true);
 while (true) {
-    const item = permutations.next();
+    const item = _permutations.next();
+    if (item.done) break;
+    console.log(item.value);
+}
+
+console.log("");
+
+const _combinations = combinations.combinations(n, true);
+while (true) {
+    const item = _combinations.next();
     if (item.done) break;
     console.log(item.value);
 }
