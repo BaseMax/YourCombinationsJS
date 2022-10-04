@@ -1,6 +1,6 @@
 # You Combinations JavaScript (JS)
 
-An efficient combinatorics library for JavaScript to generate and get the list of all **Permutations** and **Combinations** with the ability to enable or disable repetition.
+An efficient combinatorics library for JavaScript to generate and get the list of all **Permutations** and **Combinations** with the ability to enable or disable repetition. (utilizing ES2015 generators)
 
 ## Functions
 
