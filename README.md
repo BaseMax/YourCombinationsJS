@@ -2,6 +2,7 @@
 
 ## Functions
 
+- [PowerSet](#powerset)
 - [Permutation with repetition](#permutation-with-repetition)
 - [Permutation without repetition](#permutation-without-repetition)
 - [Combinations with repetition](#combinations-with-repetition)
@@ -9,11 +10,25 @@
 
 ## Usage
 
+### PowerSet
+
+```
+[...combinations.powerSet(k)]
+
+// [
+//   [],       [ 1 ],
+//   [ 2 ],    [ 1, 2 ],
+//   [ 3 ],    [ 1, 3 ],
+//   [ 2, 3 ], [ 1, 2, 3 ]
+// ]
+```
+
 ### Permutation with repetition
 
 ```
 const combinations = new YouCombinations([1, 2, 3]);
 combinations.permutations(4, true);
+
 // [ 1, 1, 1, 1 ]
 // [ 1, 1, 1, 2 ]
 // [ 1, 1, 1, 3 ]
@@ -102,6 +117,7 @@ combinations.permutations(4, true);
 ```
 const combinations = new YouCombinations([1, 2, 3]);
 combinations.permutations(2, false);
+
 // [ 1, 1, 1, 1 ]
 // [ 1, 1, 1, 2 ]
 // [ 1, 1, 1, 3 ]
@@ -124,6 +140,7 @@ combinations.permutations(2, false);
 ```
 const combinations = new YouCombinations([1, 2, 3]);
 combinations.combinations(4, true);
+
 // [ 1, 2 ]
 // [ 1, 3 ]
 // [ 2, 1 ]
@@ -137,6 +154,7 @@ combinations.combinations(4, true);
 ```
 const combinations = new YouCombinations([1, 2, 3]);
 combinations.combinations(2, false);
+
 // [ 1, 2 ]
 // [ 1, 3 ]
 // [ 2, 3 ]
