@@ -12,6 +12,7 @@ class YouCombinations {
 	
 	*powerSet(array) {
 		const size = 2n ** BigInt(array.length); 
+		
 		for (let i = 0; i < size; i++) {
 			const cur = [];
 			for(let j = 0; j < array.length; j++) if((i & (1 << j)) > 0) cur.push(array[j]);
@@ -20,9 +21,9 @@ class YouCombinations {
 	}
 
 	*combinations(length, with_repetition = false, position = 0, elements = []) {
-		const items_count = this.elements.length;
+		const size = this.elements.length;
 		
-		for (let i = position; i < items_count; i++) {
+		for (let i = position; i < size; i++) {
 			elements.push(this.elements[i]);
 
 			if (elements.length === length) yield elements;
