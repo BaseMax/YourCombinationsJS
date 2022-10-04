@@ -15,9 +15,9 @@ class YouCombinations {
 		
 		for (let i = position; i < items_count; i++){
 			elements.push(this.elements[i]);
-			if (elements.length == length) yield elements;
+			if (elements.length === length) yield elements;
 			else {
-				yield* this.combinations(length, with_repetition, (with_repetition == true ? i : i + 1), elements);
+				yield* this.combinations(length, with_repetition, (with_repetition === true ? i : i + 1), elements);
 			}
 			
 			elements.pop();
@@ -28,12 +28,12 @@ class YouCombinations {
 		for (const key in this.elements) {
 			const value = this.elements[key];
 			
-			if (with_repetition == false) if (in_array(key, keys)) continue;
+			if (with_repetition === false) if (keys.indexOf(key) !== -1) continue;
 
 			keys.push(key);
 			elements.push(value);
 			
-			if (elements.length == length) yield elements;
+			if (elements.length === length) yield elements;
 			else yield* this.permutations(length, with_repetition, elements, keys);
 			
 			keys.pop();
@@ -43,23 +43,43 @@ class YouCombinations {
 }
 
 // Eaxmple
-const n = 2;
+const n = 6;
 const k = [1, 2, 3];
 
 const combinations = new YouCombinations(k);
 
-const _permutations = combinations.permutations(n, true);
+// let _permutations = combinations.permutations(n, true);
+// while (true) {
+// 	const item = _permutations.next();
+// 	if (item.done) break;
+// 	console.log(item.value);
+// }
+
+// console.log("=====================");
+
+// let _combinations = combinations.combinations(n, true);
+// while (true) {
+// 	const item = _combinations.next();
+// 	if (item.done) break;
+// 	console.log(item.value);
+// }
+
+// console.log("=====================");
+
+let _permutations = combinations.permutations(2, false);
 while (true) {
 	const item = _permutations.next();
 	if (item.done) break;
 	console.log(item.value);
 }
 
-console.log("");
+console.log("=====================");
 
-const _combinations = combinations.combinations(n, true);
+let _combinations = combinations.combinations(2, false);
 while (true) {
 	const item = _combinations.next();
 	if (item.done) break;
 	console.log(item.value);
 }
+
+console.log("=====================");
