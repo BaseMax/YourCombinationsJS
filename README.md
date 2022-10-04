@@ -13,7 +13,7 @@
 ### PowerSet
 
 ```javascript
-[...combinations.powerSet(k)]
+[...combinations.powerSet([1, 2, 3])]
 
 // [
 //   [],       [ 1 ],
