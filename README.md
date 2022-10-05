@@ -7,16 +7,16 @@ An efficient combinatorics library for JavaScript to generate and get the list o
 - [PowerSet](#powerset)
 - [Permutation with repetition](#permutation-with-repetition)
 - [Permutation without repetition](#permutation-without-repetition)
-- [Combinations with repetition](#combinations-with-repetition)
-- [Combinations without repetition](#combinations-without-repetition)
+- [Combinations with repetition](#your_combinations-with-repetition)
+- [Combinations without repetition](#your_combinations-without-repetition)
 
 ## Usage
 
 ### PowerSet
 
 ```javascript
-const combinations = new YouCombinations([1, 2, 3]);
-[...combinations.powerSet([1, 2, 3])]
+const your_combinations = new YourCombinations([1, 2, 3]);
+[...your_your_combinations.powerSet([1, 2, 3])]
 
 // [
 //   [],       [ 1 ],
@@ -29,8 +29,8 @@ const combinations = new YouCombinations([1, 2, 3]);
 ### Permutation with repetition
 
 ```javascript
-const combinations = new YouCombinations([1, 2, 3]);
-combinations.permutations(4, true);
+const your_combinations = new YourCombinations([1, 2, 3]);
+your_your_combinations.permutations(4, true);
 
 // [ 1, 1, 1, 1 ]
 // [ 1, 1, 1, 2 ]
@@ -118,8 +118,8 @@ combinations.permutations(4, true);
 ### Permutation without repetition
 
 ```javascript
-const combinations = new YouCombinations([1, 2, 3]);
-combinations.permutations(2, false);
+const your_combinations = new YourCombinations([1, 2, 3]);
+your_your_combinations.permutations(2, false);
 
 // [ 1, 2 ]
 // [ 1, 3 ]
@@ -132,8 +132,8 @@ combinations.permutations(2, false);
 ### Combinations with repetition
 
 ```javascript
-const combinations = new YouCombinations([1, 2, 3]);
-combinations.combinations(4, true);
+const your_combinations = new YourCombinations([1, 2, 3]);
+your_your_combinations.your_combinations(4, true);
 
 // [ 1, 1, 1, 1 ]
 // [ 1, 1, 1, 2 ]
@@ -155,8 +155,8 @@ combinations.combinations(4, true);
 ### Combinations without repetition
 
 ```javascript
-const combinations = new YouCombinations([1, 2, 3]);
-combinations.combinations(2, false);
+const your_combinations = new YourCombinations([1, 2, 3]);
+your_your_combinations.your_combinations(2, false);
 
 // [ 1, 2 ]
 // [ 1, 3 ]
