@@ -1,11 +1,11 @@
 /*
- * Name: You Combinations JavaScript
+ * Name: Your Combinations JavaScript
  * Author: Max Base
  * Date: 2022/10/04
- * Repository: https://github.com/basemax/YouCombinationsJS
+ * Repository: https://github.com/basemax/YourCombinationsJS
  */
 
-class YouCombinations {
+class YourCombinations {
 	constructor(elements) {
 		this.elements = elements;
 	}    
