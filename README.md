@@ -15,6 +15,7 @@ An efficient combinatorics library for JavaScript to generate and get the list o
 ### PowerSet
 
 ```javascript
+const combinations = new YouCombinations([1, 2, 3]);
 [...combinations.powerSet([1, 2, 3])]
 
 // [
