@@ -8,14 +8,14 @@
 class YourCombinations {
 	constructor(elements) {
 		this.elements = elements;
-	}    
+	}
 	
-	*powerSet(array) {
-		const size = 2n ** BigInt(array.length); 
+	*powerSet() {
+		const size = 2n ** BigInt(this.elements.length); 
 		
 		for (let i = 0; i < size; i++) {
 			const cur = [];
-			for(let j = 0; j < array.length; j++) if((i & (1 << j)) > 0) cur.push(array[j]);
+			for(let j = 0; j < this.elements.length; j++) if((i & (1 << j)) > 0) cur.push(this.elements[j]);
 			yield cur;
 		} 
 	}
